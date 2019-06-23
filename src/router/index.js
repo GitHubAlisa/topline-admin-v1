@@ -5,7 +5,17 @@ import Router from 'vue-router'
 // 找到目录，有限加载目录中的index.js
 Vue.use(Router)
 export default new Router({
-  routes: [
+  routes: [{
+    name: 'home',
+    path: '/',
+    component: () => import('@/views/home')
+  },
+  {
+    name: 'login',
+    path: '/login',
+    component: () => import('@/views/login')
+
+  }
 
   ]
 })
